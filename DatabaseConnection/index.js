@@ -4,8 +4,18 @@ const {dbConnection} = require('./DbConnection');
 const app = express();
 app.use(express.json());
 
-app.get('/student-read',(req,res)=>{
-    res.send('students view api');
+app.post('/student-read',async (req,res)=>{
+    let mydb = await dbConnection();
+    let studentCollection = mydb.collection('students');
+    let data = await studentCollection.find().toArray();
+    let resobj = {
+        status: 'success',
+        message: 'Data read successfully',
+        data
+    }
+
+    res.send(resobj);
+
 });
 
 app.post('/student-insert', async(req,res)=>{
@@ -25,8 +35,8 @@ app.post('/student-insert', async(req,res)=>{
     let resobj = {
         status: 'success',
         message: 'Data inserted successfully',
-        // insertedId: insertres.insertedId,
-        // insertres
+        insertedId: insertres.insertedId,
+        insertres
     }
     res.send(resobj);
 });
