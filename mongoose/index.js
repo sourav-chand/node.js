@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-let enqueryModel = require("./enquiry.model");
+let enqueryModel = require("./models/enquiry.model");
 let express = require("express");
 let app = express();
 app.use(express.json());
