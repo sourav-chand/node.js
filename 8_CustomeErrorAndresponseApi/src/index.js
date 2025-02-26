@@ -4,8 +4,7 @@ dotenv.config({
 });
 // nodemon -r dotenv/config --experimental-json-modules src/index.js
 import connectDB from "./db/index.js";
-import express from "express";
-const app = express();
+import app from "./app.js";
 
 connectDB()
   .then(() => {
