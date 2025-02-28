@@ -2,7 +2,7 @@
 chai-backend-main
 # Node modules
 node_modules/
-
+10_fileuploading
 # Environment variables
 .env
 package-lock.json
