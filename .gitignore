@@ -2,6 +2,7 @@
 chai-backend-main
 # Node modules
 node_modules/
+template
 10_fileuploading
 # Environment variables
 .env
