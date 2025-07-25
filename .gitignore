@@ -4,7 +4,6 @@ node_modules/
 template
 10_fileuploading
 # Environment variables
-.env
 package-lock.json
 package.json
 
@@ -35,3 +34,6 @@ dump.rdb
 
 # System files
 Thumbs.db
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
